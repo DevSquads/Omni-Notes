@@ -16,10 +16,10 @@ pipeline {
                sh './gradlew connectedAndroidTest'
             }
         }
-        post { 
-            always { 
-                sh 'adb emu kill'
-            }
+    }
+    post { 
+        always { 
+            sh 'adb emu kill'
         }
     }
 }

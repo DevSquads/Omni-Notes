@@ -7,7 +7,7 @@ pipeline {
              }
             steps {
                 echo "Staring android emulator"
-                sh 'emulator-headless -no-window -no-skin @Pixel_3_API_27'
+                sh 'emulator-headless -no-window -no-skin @AVD_API_27'
                 sh 'adb wait-for-device'
             }
         }

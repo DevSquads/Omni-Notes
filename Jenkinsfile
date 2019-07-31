@@ -8,6 +8,7 @@ pipeline {
             steps {
                 echo "Staring android emulator"
                 sh 'echo $ANDROID_SDK_HOME'
+                sh 'echo $ANDROID_SDK_ROOT'
                 sh 'emulator-headless -no-window -no-skin @AVD_API_27 &'
                 sh 'adb wait-for-device'
             }

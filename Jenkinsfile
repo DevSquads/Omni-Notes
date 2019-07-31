@@ -7,8 +7,6 @@ pipeline {
              }
             steps {
                 echo "Staring android emulator"
-                sh 'cd '
-                sh 'source .bash_profile'
                 sh 'echo $ANDROID_SDK_HOME'
                 sh 'echo $ANDROID_SDK_ROOT'
                 sh 'emulator-headless -no-window -no-skin @AVD_API_27 &'

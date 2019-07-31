@@ -7,6 +7,7 @@ pipeline {
              }
             steps {
                 echo "Staring android emulator"
+                sh 'echo $ANDROID_SDK_HOME'
                 sh 'emulator-headless -no-window -no-skin @AVD_API_27 &'
                 sh 'adb wait-for-device'
             }
@@ -17,7 +18,7 @@ pipeline {
             }
         }
     }
-    post { 
+    post {
         always {
             junit 'omniNotes/build/outputs/androidTest-results/connected/**/*.xml'
             sh 'adb emu kill'

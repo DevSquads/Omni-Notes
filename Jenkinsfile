@@ -22,8 +22,8 @@ pipeline {
     }
     post {
         always {
-            junit 'omniNotes/build/outputs/androidTest-results/connected/**/*.xml'
             sh 'adb emu kill'
+            junit 'omniNotes/build/outputs/androidTest-results/connected/**/*.xml'
         }
     }
 }

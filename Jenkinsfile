@@ -15,6 +15,7 @@ pipeline {
         }
         stage('Building and running tests') {
             steps {
+               sh './gradlew clean'
                sh './gradlew connectedAndroidTest'
             }
         }

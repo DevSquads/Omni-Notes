@@ -9,7 +9,7 @@ pipeline {
                 echo "Staring android emulator"
                 sh 'echo $ANDROID_SDK_HOME'
                 sh 'echo $ANDROID_SDK_ROOT'
-                sh 'emulator-headless -no-window -no-boot-anim -no-skin -no-audio -memory 4096 @AVD_API_28 &'
+                sh 'emulator-headless -no-window -no-boot-anim -no-skin -no-audio -memory 8192 @AVD_API_28 &'
                 sh 'adb wait-for-device'
             }
         }
